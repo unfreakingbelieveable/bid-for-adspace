@@ -1,0 +1,57 @@
+{
+	"abi": [
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "_from",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "_amount",
+			  "type": "uint256"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "string",
+			  "name": "_link",
+			  "type": "string"
+			}
+		  ],
+		  "name": "NewAd",
+		  "type": "event"
+		},
+		{
+		  "inputs": [],
+		  "name": "currBid",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function",
+		  "constant": true
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "string",
+			  "name": "_link",
+			  "type": "string"
+			}
+		  ],
+		  "name": "bid",
+		  "outputs": [],
+		  "stateMutability": "payable",
+		  "type": "function",
+		  "payable": true
+		}
+	  ]
+}
