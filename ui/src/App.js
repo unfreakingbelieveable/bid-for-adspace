@@ -1,10 +1,12 @@
 import './App.css';
 import React from 'react';
-import { web3, accounts } from './web3';
+import { accounts } from './web3';
 import contract from './contract';
 
 class App extends React.Component {
   
+  refreshData;
+
   state = {
     lastBid: 0,
     highestBidder: '',
@@ -36,6 +38,12 @@ class App extends React.Component {
 
   async componentDidMount() {
     await this.getCurrentData();
+
+    this.refreshData = setInterval(this.getCurrentData, 3000)
+  }
+
+  async componentWillUnmount() {
+    clearInterval(this.refreshData);
   }
 
   render () {
